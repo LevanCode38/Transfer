@@ -1,6 +1,6 @@
 <?php
 // YouTube private ლინკი (შენ ჩასვი შენი ლინკი)
-$youtube_link = "https://youtu.be/PRIVATE_VIDEO_ID";
+$youtube_link = "https://www.youtube.com/watch?v=j2alDJnk13c";
 
 // PayPal-ისგან მონაცემების მიღება
 $raw_post_data = file_get_contents("php://input");
