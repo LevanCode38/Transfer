@@ -1,14 +1,14 @@
-[
-    {
-        "email": "levani44@gmail.com",
-        "product_id": "01",
-        "youtube_link": "https://www.youtube.com/watch?v=hfmS_FaAQ3w",
-        "date": "2024-02-11 12:00:00"
-    },
-    {
-        "email": "levani44@gmail.com",
-        "product_id": "02",
-        "youtube_link": "https://youtu.be/private_link_2",
-        "date": "2024-02-11 12:05:30"
-    }
-]
+<?php
+$log_file = "sent_emails.json";
+$logs = file_exists($log_file) ? json_decode(file_get_contents($log_file), true) : [];
+
+$logs[] = [
+    "email" => "test@example.com",
+    "product_id" => "course_123",
+    "youtube_link" => "https://youtu.be/test",
+    "date" => date("Y-m-d H:i:s")
+];
+
+file_put_contents($log_file, json_encode($logs, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
+echo "✅ JSON ფაილი განახლდა!";
+?>
