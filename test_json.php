@@ -6,7 +6,7 @@ $json_file = "products.json";
 $json_data = json_decode(file_get_contents($json_file), true);
 
 // საძიებელი Product ID (მაგალითად, PayPal-დან მიღებული Product ID)
-$product_id = "course_123"; 
+$product_id = "14"; 
 
 // JSON-ში Product ID-ის მოძებნა
 if (isset($json_data[$product_id])) {
